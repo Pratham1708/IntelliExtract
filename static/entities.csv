@@ -1,0 +1,14 @@
+Entity,Label,Explanation
+Elon Musk,PERSON,"People, including fictional"
+Tesla,ORG,"Companies, agencies, institutions, etc."
+SpaceX,PERSON,"People, including fictional"
+"January 15, 2024",DATE,Absolute or relative dates or periods
+NASA,ORG,"Companies, agencies, institutions, etc."
+Los Angeles,GPE,"Countries, cities, states"
+California,GPE,"Countries, cities, states"
+Apple Inc.,ORG,"Companies, agencies, institutions, etc."
+$2 billion,MONEY,"Monetary values, including unit"
+Berlin,GPE,"Countries, cities, states"
+Germany,GPE,"Countries, cities, states"
+Stanford University,ORG,"Companies, agencies, institutions, etc."
+the next decade,DATE,Absolute or relative dates or periods

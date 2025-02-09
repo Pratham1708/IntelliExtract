@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliExtract - Entity Extraction</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f4; }
+        h2 { color: #333; }
+        textarea { width: 100%; height: 150px; font-size: 14px; padding: 10px; }
+        button { background-color: #4caf50; color: white; padding: 10px 15px; border: none; cursor: pointer; }
+        button:hover { background-color: #45a049; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #4caf50; color: white; }
+        .download { display: block; margin-top: 10px; color: #007bff; text-decoration: none; }
+        .download:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h2>IntelliExtract - Named Entity Recognition</h2>
+    <form method="post">
+        <textarea name="text" placeholder="Enter text here..." required></textarea><br>
+        <button type="submit">Extract Entities</button>
+    </form>
+
+    {% if entities %}
+    <h3>Extracted Entities:</h3>
+    <table>
+        <tr>
+            <th>Entity</th>
+            <th>Label</th>
+            <th>Explanation</th>
+        </tr>
+        {% for entity in entities %}
+        <tr>
+            <td>{{ entity.Entity }}</td>
+            <td>{{ entity.Label }}</td>
+            <td>{{ entity.Explanation }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% if csv_path %}
+        <a href="{{ csv_path }}" download class="download">Download Entities CSV</a>
+    {% endif %}
+    {% endif %}
+</body>
+</html>
+    
